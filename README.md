@@ -6,7 +6,7 @@ The sample app is a very simple app that demonstrates some of the interesting ne
 
 The Siri service API now helps to integrate the AI features of iOS for use to UI testing. One of the immidiate uses of this API is to bring the App to the foreground from background without needing to relaunch the app. App features that rely on backgrounding and foregrounding can now easily be tested.
 
- Siri API ![](https://developer.apple.com/reference/xctest/xcuisiriservice)
+ [Siri API] (https://developer.apple.com/reference/xctest/xcuisiriservice)
 
 ```
 func testLaunchAndSendToBG()  {
