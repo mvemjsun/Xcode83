@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="xcode832" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country Code (XXX)" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-0W-xFX">
+                                <rect key="frame" x="62" y="134" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="countryCodeField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="251" id="wHh-4p-B81"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="alphabet"/>
+                                <connections>
+                                    <action selector="editCountryCode:" destination="BYZ-38-t0r" eventType="touchDown" id="9R4-cO-HD9"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjJ-V8-MZF">
+                                <rect key="frame" x="62" y="72" width="251" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93978220224380493" green="0.13649708032608032" blue="0.31650432944297791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni5-sm-3b8">
+                                <rect key="frame" x="62" y="473" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="getCountryInfo"/>
+                                <state key="normal" title="Get Country Info"/>
+                                <connections>
+                                    <action selector="getCountryInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btI-es-zhw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country Info" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-r9-UVi">
+                                <rect key="frame" x="62" y="205" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="countryInfoText">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Messages" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dme-s9-RLi">
+                                <rect key="frame" x="62" y="282" width="251" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="messages"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="251" id="6CI-er-jhG"/>
+                                    <constraint firstAttribute="height" constant="128" id="ll6-IB-Bb7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="251" id="qbT-iU-Dca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UDe-r9-UVi" firstAttribute="top" secondItem="vUY-0W-xFX" secondAttribute="bottom" constant="41" id="3hD-Ft-qIw"/>
+                            <constraint firstItem="vUY-0W-xFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Nc-Xf-lGx"/>
+                            <constraint firstItem="UDe-r9-UVi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cpx-zd-Uoh"/>
+                            <constraint firstItem="UDe-r9-UVi" firstAttribute="width" secondItem="vUY-0W-xFX" secondAttribute="width" id="FWn-Mr-Fdk"/>
+                            <constraint firstItem="vUY-0W-xFX" firstAttribute="top" secondItem="SjJ-V8-MZF" secondAttribute="bottom" constant="41.5" id="HmI-fS-Zsp"/>
+                            <constraint firstItem="Dme-s9-RLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="O6j-pS-VgP"/>
+                            <constraint firstItem="SjJ-V8-MZF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="Rta-ib-Ikf"/>
+                            <constraint firstItem="Dme-s9-RLi" firstAttribute="top" secondItem="UDe-r9-UVi" secondAttribute="bottom" constant="47" id="Z0b-dz-0qb"/>
+                            <constraint firstItem="SjJ-V8-MZF" firstAttribute="width" secondItem="vUY-0W-xFX" secondAttribute="width" id="g5j-RS-A3m"/>
+                            <constraint firstItem="Ni5-sm-3b8" firstAttribute="width" secondItem="vUY-0W-xFX" secondAttribute="width" id="j6j-1m-yRS"/>
+                            <constraint firstItem="Dme-s9-RLi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mMG-fL-Tlx"/>
+                            <constraint firstItem="SjJ-V8-MZF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nSc-c0-3st"/>
+                            <constraint firstItem="Ni5-sm-3b8" firstAttribute="top" secondItem="Dme-s9-RLi" secondAttribute="bottom" constant="63" id="rPu-dg-rew"/>
+                            <constraint firstItem="Ni5-sm-3b8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zB5-E6-AMY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGetCountry" destination="Ni5-sm-3b8" id="hO7-vo-Slb"/>
+                        <outlet property="countryInfo" destination="UDe-r9-UVi" id="93h-9r-er3"/>
+                        <outlet property="label" destination="SjJ-V8-MZF" id="4cd-k6-zWj"/>
+                        <outlet property="messages" destination="Dme-s9-RLi" id="7uu-dM-QKV"/>
+                        <outlet property="textField" destination="vUY-0W-xFX" id="ETd-HM-Bwe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+        </scene>
+    </scenes>
+</document>
