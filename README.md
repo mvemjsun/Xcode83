@@ -1,6 +1,6 @@
 # Sample XCode project demonstrating new UITesting features in XCode 8.3
 
-The sample app is a very simple app that demonstrates some of the interesting new features of the XCode 8.3 UI testing API. The app screen loads 1 lable whose text changes asunchronously to simulate a detal. There are 2 text fields one to enter a 3 leter country code and one that displays its name. There is a text view to display any error message and finally a button. The API http://services.groupkt.com/country/get/iso3code is used to retrieve country code info.
+The sample app is a very simple app that demonstrates some of the interesting new features of the XCode 8.3 UI testing API. The app screen loads 1 lable whose text changes asunchronously to simulate a delay. There are 2 text fields , one to enter a 3 letter country code and another that displays its name. There is a text view to display informational message and finally a button. The API http://services.groupkt.com/country/get/iso3code is used to retrieve country code info.
 
 ## Siri Service
 
@@ -24,6 +24,8 @@ func testLaunchAndSendToBG()  {
 
 ## Waiting APIs
 The new version of XCode and XCTest has introduced new waiting API's that let us wait for an array of expectations. Its also possible to use this so that the order in which the expectations are satistfied is also checked.
+
+[Waiting API] (https://developer.apple.com/reference/xctest/xctwaiter)
 
 ```swift
 func waitFor(element e: XCUIElement) -> Bool {
