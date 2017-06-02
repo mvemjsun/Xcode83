@@ -8,7 +8,7 @@ The Siri service API now helps to integrate the AI features of iOS for use to UI
 
  [Siri API] (https://developer.apple.com/reference/xctest/xcuisiriservice)
 
-```
+```swift
 func testLaunchAndSendToBG()  {
 let element1 = XCUIApplication().staticTexts["Country Name from ISO3 code"]
 let element2 = XCUIApplication().textFields["Enter 3 letter Country Code"]
@@ -25,7 +25,7 @@ XCTAssertTrue(result2)
 ## Waiting APIs
 The new version of XCode and XCTest has introduced new waiting API's that let us wait for an array of expectations. Its also possible to use this so that the order in which the expectations are satistfied is also checked.
 
-```
+```swift
 func waitFor(element e: XCUIElement) -> Bool {
 let p = NSPredicate(format: "exists == true")
 let e1 = XCTNSPredicateExpectation(predicate: p, object: e)
