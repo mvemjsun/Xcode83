@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     @IBAction func editCountryCode(_ sender: Any) {
         textField.text = ""
         messages.text = ""
+        countryInfo.text = ""
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
