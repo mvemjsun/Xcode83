@@ -20,6 +20,7 @@ class xcode832UITests: XCTestCase {
         super.tearDown()
     }
     
+    // Siri and Activities
     func testLaunchAndSendToBG()  {
         let element1 = XCUIApplication().staticTexts["Country Name from ISO3 code"]
         let element2 = XCUIApplication().textFields["Enter 3 letter Country Code"]
@@ -42,6 +43,7 @@ class xcode832UITests: XCTestCase {
         }
     }
     
+    // Screen shots
     func testGetAValidCountryCode() {
         let countryCodeTextInputElement = XCUIApplication().textFields.matching(identifier: "countryCodeField").element(boundBy: 0)
         let countryDescription = XCUIApplication().textFields["Australia"]
@@ -54,6 +56,14 @@ class xcode832UITests: XCTestCase {
         getInfoButton.tap()
         XCTAssertTrue(waitForElementToExist(element: countryDescription))
         
+        // Capture Screenshot
+        XCTContext.runActivity(named: "Capture screenshot") { activity in
+        let screen = XCUIScreen.main
+        let screenShot = screen.screenshot()
+        let attachment = XCTAttachment(screenshot: screenShot)
+        attachment.lifetime = .keepAlways // Keep even if test fails, else xcode deletes it.
+        activity.add(attachment)
+        }
     }
     
     func testGetAnInvalidCountryCode() {
@@ -67,6 +77,7 @@ class xcode832UITests: XCTestCase {
         getInfoButton.tap()
     }
     
+    // Waiting for expectations
     func waitForElementToExist(element e: XCUIElement) -> Bool {
         let p = NSPredicate(format: "exists == true")
         let e1 = XCTNSPredicateExpectation(predicate: p, object: e)
