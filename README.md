@@ -32,7 +32,8 @@ XCTContext.runActivity(named: "Then I should see the text Enter 3 letter Country
 
 ```
 
-![](https://github.com/mvemjsun/Xcode83/blob/master/public/img/activity.png?raw=true)
+![](https://github.com/mvemjsun/Xcode83/blob/master/activity.png?raw=true)
+https://github.com/mvemjsun/Xcode83/blob/master/activity.png
 
 The above code also demonstrates the use of `Activities`  that allow us to group a group of statements in a named block of code. This causes the test result report to be formatted in a more conscise way so that its more readable.
 
