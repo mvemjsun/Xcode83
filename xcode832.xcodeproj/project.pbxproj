@@ -15,6 +15,7 @@
 		D10FDE251ED82A860007A9E7 /* xcode832UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10FDE241ED82A860007A9E7 /* xcode832UITests.swift */; };
 		D11F31DB1EDEEAFE006C91AC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11F31DA1EDEEAFE006C91AC /* Service.swift */; };
 		D1959F3F1EE19FC50063EF99 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D1959F3E1EE19FC50063EF99 /* README.md */; };
+		D1B4AD431EEEE89D001315C7 /* activity.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B4AD421EEEE89C001315C7 /* activity.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D10FDE261ED82A860007A9E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11F31DA1EDEEAFE006C91AC /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D1959F3E1EE19FC50063EF99 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D1B4AD421EEEE89C001315C7 /* activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = activity.png; path = ../../../Desktop/activity.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		D10FDE031ED82A860007A9E7 = {
 			isa = PBXGroup;
 			children = (
+				D1B4AD421EEEE89C001315C7 /* activity.png */,
 				D1959F3E1EE19FC50063EF99 /* README.md */,
 				D11F31D91EDEEA84006C91AC /* classes */,
 				D10FDE0E1ED82A860007A9E7 /* xcode832 */,
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B4AD431EEEE89D001315C7 /* activity.png in Resources */,
 				D10FDE1A1ED82A860007A9E7 /* LaunchScreen.storyboard in Resources */,
 				D10FDE171ED82A860007A9E7 /* Assets.xcassets in Resources */,
 				D10FDE151ED82A860007A9E7 /* Main.storyboard in Resources */,
