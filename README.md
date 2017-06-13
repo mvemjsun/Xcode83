@@ -1,6 +1,6 @@
 # Sample XCode project demonstrating new UITesting features in XCode 8.3/9
 
-The sample app is a very simple app that demonstrates some of the interesting new features of the XCode 8.3 (and onwards) UI testing API. The app screen loads 1 lable whose text changes asynchronously to simulate a delay. There are 2 text fields , one to enter a 3 letter country code and another that displays its name from the API. There is a text view to display informational message and finally a button. The API http://services.groupkt.com/country/get/iso3code is used to retrieve country code info.
+The sample app is a very simple app that demonstrates some of the interesting new features of the XCode 8.3 (and onwards) UI testing API. The app screen loads a lable whose text changes asynchronously to simulate a delay. There are 2 text fields , one to enter a 3 letter country code and another that displays its name from the API. There is a text view to display informational message and finally a button. The API http://services.groupkt.com/country/get/iso3code is used to retrieve country code info.
 
 ## Siri Service and Activities
 
