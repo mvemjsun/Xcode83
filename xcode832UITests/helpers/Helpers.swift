@@ -29,12 +29,6 @@ extension XCTest {
         }
     }
     
-    func step(_ text: String, step: () -> Void ) {
-        XCTContext.runActivity(named: #function + " " + text) { _ in
-            step()
-        }
-    }
-    
     func And(_ text: String, step: () -> Void ) {
         XCTContext.runActivity(named: #function + " " + text) { _ in
             step()
