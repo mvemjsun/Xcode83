@@ -15,26 +15,26 @@ func testLaunchAndSendToBG()  {
     let element2 = XCUIApplication().textFields["Enter 3 letter Country Code"]
 
     Given("I wait for the screen header to Appear") { _ in
-    let result1 = waitForElementToExist(element: element1)
-    XCTAssertTrue(result1)
+        let result1 = waitForElementToExist(element: element1)
+        XCTAssertTrue(result1)
     }
 
     When("I press the home button") { _ in
-    XCUIDevice.shared().press(XCUIDeviceButton.home)
+        XCUIDevice.shared().press(XCUIDeviceButton.home)
     }
 
     And("I ask Siri to open my App") { _ in
-    XCUIDevice.shared().siriService.activate(voiceRecognitionText: "open xcode832")
+        XCUIDevice.shared().siriService.activate(voiceRecognitionText: "open xcode832")
     }
 
     Then("I should see the text Enter 3 letter Country Code") { _ in
-    let result2 = waitForElementToExist(element: element2)
-    XCTAssertTrue(result2)
+        let result2 = waitForElementToExist(element: element2)
+        XCTAssertTrue(result2)
     }
 
     And("I should see the text Enter 3 letter Country Code")  { _ in
-    let result2 = waitForElementToExist(element: element2)
-    XCTAssertTrue(result2)
+        let result2 = waitForElementToExist(element: element2)
+        XCTAssertTrue(result2)
     }
 }
 
@@ -46,39 +46,39 @@ import XCTest
 extension XCTest {
 
     func Given(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 
     func When(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 
     func Then(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 
     func step(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 
     func And(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 
     func But(_ text: String, step: () -> Void ) {
-    XCTContext.runActivity(named: #function + " " + text) { _ in
-    step()
-    }
+        XCTContext.runActivity(named: #function + " " + text) { _ in
+        step()
+        }
     }
 }
 ```
