@@ -31,11 +31,6 @@ func testLaunchAndSendToBG()  {
         let result2 = waitForElementToExist(element: element2)
         XCTAssertTrue(result2)
     }
-
-    And("I should see the text Enter 3 letter Country Code")  { _ in
-        let result2 = waitForElementToExist(element: element2)
-        XCTAssertTrue(result2)
-    }
 }
 
 // Gherkin style Wrapper around `XCTContext.runActivity`
