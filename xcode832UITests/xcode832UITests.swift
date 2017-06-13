@@ -25,19 +25,25 @@ class xcode832UITests: XCTestCase {
         let element1 = XCUIApplication().staticTexts["Country Name from ISO3 code"]
         let element2 = XCUIApplication().textFields["Enter 3 letter Country Code"]
         
-        XCTContext.runActivity(named: "Given I wait for the screen header to Appear") { _ in
+        Given("I wait for the screen header to Appear") { _ in
             let result1 = waitForElementToExist(element: element1)
             XCTAssertTrue(result1)
         }
-        XCTContext.runActivity(named: "And I press the home button") { _ in
+        
+        When("I press the home button") { _ in
             XCUIDevice.shared().press(XCUIDeviceButton.home)
         }
         
-        XCTContext.runActivity(named: "And I ask Siri to open my App") { _ in
+        And("I ask Siri to open my App") { _ in
             XCUIDevice.shared().siriService.activate(voiceRecognitionText: "open xcode832")
         }
         
-        XCTContext.runActivity(named: "Then I should see the text Enter 3 letter Country Code") { _ in
+       Then("I should see the text Enter 3 letter Country Code") { _ in
+            let result2 = waitForElementToExist(element: element2)
+            XCTAssertTrue(result2)
+        }
+        
+        And("I should see the text Enter 3 letter Country Code")  { _ in
             let result2 = waitForElementToExist(element: element2)
             XCTAssertTrue(result2)
         }
@@ -84,7 +90,4 @@ class xcode832UITests: XCTestCase {
         let result = XCTWaiter.wait(for: [e1], timeout: 10)
         return (result == .completed)
     }
-    
-    
-    
 }

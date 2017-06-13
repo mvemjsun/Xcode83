@@ -9,25 +9,76 @@ The Siri service API now helps to integrate the AI features of iOS for use to UI
  [Siri API] (https://developer.apple.com/reference/xctest/xcuisiriservice)
 
 ```swift
+
 func testLaunchAndSendToBG()  {
     let element1 = XCUIApplication().staticTexts["Country Name from ISO3 code"]
     let element2 = XCUIApplication().textFields["Enter 3 letter Country Code"]
 
-    XCTContext.runActivity(named: "Given I wait for the screen header to Appear") { _ in
-      let result1 = waitForElementToExist(element: element1)
-      XCTAssertTrue(result1)
-    }
-    XCTContext.runActivity(named: "And I press the home button") { _ in
-      XCUIDevice.shared().press(XCUIDeviceButton.home)
+    Given("I wait for the screen header to Appear") { _ in
+    let result1 = waitForElementToExist(element: element1)
+    XCTAssertTrue(result1)
     }
 
-    XCTContext.runActivity(named: "And I ask Siri to open my App") { _ in
-      XCUIDevice.shared().siriService.activate(voiceRecognitionText: "open xcode832")
+    When("I press the home button") { _ in
+    XCUIDevice.shared().press(XCUIDeviceButton.home)
     }
 
-    XCTContext.runActivity(named: "Then I should see the text Enter 3 letter Country Code") { _ in
-      let result2 = waitForElementToExist(element: element2)
-      XCTAssertTrue(result2)
+    And("I ask Siri to open my App") { _ in
+    XCUIDevice.shared().siriService.activate(voiceRecognitionText: "open xcode832")
+    }
+
+    Then("I should see the text Enter 3 letter Country Code") { _ in
+    let result2 = waitForElementToExist(element: element2)
+    XCTAssertTrue(result2)
+    }
+
+    And("I should see the text Enter 3 letter Country Code")  { _ in
+    let result2 = waitForElementToExist(element: element2)
+    XCTAssertTrue(result2)
+    }
+}
+
+// Gherkin style Wrapper around `XCTContext.runActivity`
+
+import Foundation
+import XCTest
+
+extension XCTest {
+
+    func Given(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
+    }
+
+    func When(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
+    }
+
+    func Then(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
+    }
+
+    func step(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
+    }
+
+    func And(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
+    }
+
+    func But(_ text: String, step: () -> Void ) {
+    XCTContext.runActivity(named: #function + " " + text) { _ in
+    step()
+    }
     }
 }
 ```
