@@ -101,7 +101,7 @@ func waitFor(element e: XCUIElement) -> Bool {
 }
 ```
 
-## Screenshots
+## Screenshots & Attachments
 Screenshots can now be taken using the new APIs. Xcode deletes screenshots if the tests are success bu default, how ever this can be overridded through APIs. The API offers to capture screenshots of the whole screen or of an individual UI element.
 
 [Screenshot API] (https://developer.apple.com/documentation/xctest/xcuiscreen)
